@@ -1,0 +1,18 @@
+<p class="principal">example1 MatTable</p>
+
+<div *ngIf="bankers">
+  <table mat-table [dataSource]="bankers" class="mat-elevation-z8" #tableBankers>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let bankers">{{ bankers.title }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let bankers">{{ bankers.email }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>
+</div>

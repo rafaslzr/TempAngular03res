@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "Angu-lar"
+  description: "Angular app de prueba"
+  annotations:
+    github.com/project-slug: RafaelSalazarLopez/TempAngular03res
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  lifecycle: experimental
+  owner: "group:default/guests"
